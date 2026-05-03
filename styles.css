@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;900&display=swap');
+
+:root {
+    --bg: #F7E7CE;
+    --primary: #FFD700;
+    --secondary: #FF6B6B;
+    --accent: #4ECDC4;
+    --black: #000000;
+    --white: #FFFFFF;
+    --shadow: 8px 8px 0px var(--black);
+    --shadow-hover: 4px 4px 0px var(--black);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    background-color: var(--bg);
+    color: var(--black);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg);
+    border-left: 4px solid var(--black);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--secondary);
+    border: 4px solid var(--black);
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    background: var(--white);
+    border-bottom: 4px solid var(--black);
+    padding: 15px 20px;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 700;
+    margin-left: 20px;
+    border: 2px solid transparent;
+    padding: 5px 10px;
+    transition: all 0.2s;
+}
+
+.nav-links a:hover {
+    background: var(--accent);
+    border: 2px solid var(--black);
+    box-shadow: 3px 3px 0px var(--black);
+}
+
+header {
+    background-color: var(--primary);
+    border-bottom: 6px solid var(--black);
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--white);
+    display: inline-block;
+    padding: 5px 15px;
+    border: 3px solid var(--black);
+    box-shadow: 4px 4px 0px var(--black);
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 60px 0 40px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.menu-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.category {
+    margin-bottom: 80px;
+}
+
+.category-title {
+    font-size: 2rem;
+    background: var(--secondary);
+    color: var(--white);
+    display: inline-block;
+    padding: 10px 20px;
+    border: 4px solid var(--black);
+    box-shadow: 6px 6px 0px var(--black);
+    margin-bottom: 30px;
+    transform: rotate(-2deg);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.item {
+    background: var(--white);
+    border: 4px solid var(--black);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.item:hover {
+    transform: translate(4px, 4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid var(--black);
+    margin-bottom: 15px;
+}
+
+.item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 900;
+    background: var(--accent);
+    padding: 2px 10px;
+    border: 2px solid var(--black);
+}
+
+.best-selling {
+    position: relative;
+}
+
+.best-selling::after {
+    content: "BEST SELLER!";
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #FF00FF;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: 900;
+    border: 3px solid var(--black);
+    box-shadow: 4px 4px 0px var(--black);
+    transform: rotate(10deg);
+}
+
+.about {
+    background: var(--accent);
+    border-top: 6px solid var(--black);
+    border-bottom: 6px solid var(--black);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+    background: var(--white);
+}
+
+.contact-box {
+    display: inline-block;
+    border: 4px solid var(--black);
+    box-shadow: 10px 10px 0px var(--secondary);
+    padding: 40px;
+    background: var(--white);
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.contact p {
+    font-size: 1.8rem;
+    margin: 10px 0;
+    font-weight: 900;
+}
+
+footer {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 40px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 30px 15px;
+    }
+    header h1 { 
+        font-size: 2rem; 
+    }
+    .section-title { 
+        font-size: 1.8rem; 
+        margin: 40px 0 20px;
+    }
+    .mobile-hide {
+        display: none;
+    }
+    .sticky-nav {
+        padding: 8px 15px;
+    }
+    .nav-content {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+    .nav-links a {
+        margin: 0 4px;
+        font-size: 0.75rem;
+        padding: 3px 6px;
+        white-space: nowrap;
+    }
+    .category-title {
+        font-size: 1.5rem;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .about h2 {
+        font-size: 2.5rem;
+    }
+    .contact-box {
+        padding: 20px;
+        width: 100%;
+    }
+    .contact p {
+        font-size: 1.2rem;
+    }
+}
